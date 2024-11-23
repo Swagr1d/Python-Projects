@@ -4,13 +4,14 @@
 3.000) pip install rosreestr2coord
 3) rosreestr2coord -С -l ./cadastral_numbers_list.txt
 С — центрует координаты
-l — принять данные ЛИСТ
+l — принять данные list
 terminal 
 cd или cd ..
 ls список папок
-cd Desktop выбираем файл txt с координатами с рабочего стола, код пишет куда сохранил, на раб столе папка output
-в окне код прописывай сохранить в xlsx файл и нажимай Shift+Enter и там уже разбивка будет по столбцам 
-обновление pip
+cd Desktop 
+выбираем файл txt с координатами с рабочего стола, код пишет куда сохранил, на раб столе папка output
+
+обновление pip и rosreestr2coord
 python -m pip install --upgrade pip
 python -m pip install --upgrade rosreestr2coord
 
@@ -30,5 +31,5 @@ df = df.replace({r"\[\[\[\[|\]\]\]\]": ""}, regex=True)
 df.to_excel("coord_result_list.xlsx", index=False, engine="openpyxl")
 
 
-в блоке кода и все сохраним результат с разбивкой берем координаты в наш перечень через ВПР
+в блоке кода и все сохраним результат с разбивкой берем координаты в наш перечень
 
